@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_green_dark">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DICTIONARY FRAGMENT"
+            android:textSize="20sp"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/myBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Go To Detail"
+            android:layout_gravity="center"
+            />
+    </LinearLayout>
+</FrameLayout>
