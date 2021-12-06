@@ -16,6 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
+            app:navigationIcon="@drawable/ic_baseline_menu_24"
             app:contentInsetStartWithNavigation="0dp"
             app:popupTheme="@style/Theme.00009967dictionary.PopupOverlay">
 
@@ -35,9 +36,6 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <FrameLayout
-        android:id="@+id/fragment_container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

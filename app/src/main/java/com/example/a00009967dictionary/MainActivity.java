@@ -8,6 +8,7 @@ import android.view.Menu;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.core.view.GravityCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -38,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        setSupportActionBar(binding.appBarMain.toolbar);
+        //setSupportActionBar(binding.appBarMain.toolbar);
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
         // Passing each menu ID as a set of Ids because each
@@ -50,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
 //        NavController navController = Navigation.findNavController(this, R.id.fragment_container);
 //        NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
 //        NavigationUI.setupWithNavController(navigationView, navController);
-//
+
 
         dictionaryFragment = new DictionaryFragment();
         bookmarkFragment = new BookmarkFragment();
@@ -94,16 +95,15 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onSupportNavigateUp() {
-        NavController navController = Navigation.findNavController(this, R.id.fragment_container);
-        return NavigationUI.navigateUp(navController, mAppBarConfiguration)
-                || super.onSupportNavigateUp();
+        binding.getRoot().openDrawer(GravityCompat.START);
+        return true;
     }
 
 
 
 
     void goToFragment(Fragment fragment, boolean isTop){
-        FragmentManager fragmentManager = getSupportFragmentManager();
+        /*FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
 
@@ -111,6 +111,6 @@ public class MainActivity extends AppCompatActivity {
         if(!isTop){
             fragmentTransaction.addToBackStack(null);
         }
-        fragmentTransaction.commit();
+        fragmentTransaction.commit();*/
     }
 }
